@@ -25,7 +25,8 @@ const Overlay = ({ image, onClose }) => {
       <img
         src={image}
         alt="Document Preview"
-        className="max-w-full min-h-[75%]"
+        className="max-w-full max-h-full rounded-lg p-7"
+        style={{ borderRadius: "5rem" }}
       />
     </div>
   );
