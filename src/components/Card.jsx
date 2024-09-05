@@ -5,7 +5,7 @@ const Card = ({ doc, onClick }) => {
   const [isLoading, setIsLoading] = useState(true);
 
   const handleImageLoad = () => {
-    setIsLoading(true);
+    setIsLoading(false);
   };
 
   return (
@@ -22,6 +22,7 @@ const Card = ({ doc, onClick }) => {
         <img
           src={doc.image}
           alt={doc.title}
+          loading="lazy"
           className={`object-cover w-full h-32 rounded-t-lg ${
             isLoading ? "hidden" : "block"
           }`}
