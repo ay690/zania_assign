@@ -1,7 +1,11 @@
-import React from "react";
+import DocumentCards from "./components/Document.jsx";
 
 const App = () => {
-  return <div className="text-2xl underline">Hello</div>;
+  return (
+    <div>
+      <DocumentCards />
+    </div>
+  );
 };
 
 export default App;
