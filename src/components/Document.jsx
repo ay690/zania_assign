@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import Card from "./Card";
+import Overlay from "../utils/overlay";
 import { documents } from "../data/document";
 
 const DocumentCards = () => {
@@ -20,8 +21,7 @@ const DocumentCards = () => {
   return (
     <div className="p-5">
       <h2 className="text-3xl font-serif font-[500] capitalize text-center underline text-gray-600">
-        {" "}
-        document manager
+        Document Manager
       </h2>
       <DragDropContext onDragEnd={onDragEnd}>
         <Droppable droppableId="documents">
@@ -51,24 +51,7 @@ const DocumentCards = () => {
         </Droppable>
       </DragDropContext>
 
-      {overlayImage && (
-        <div
-          className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75"
-          onClick={() => setOverlayImage(null)}
-        >
-          <img
-            src={overlayImage}
-            alt="Document Preview"
-            className="max-w-full max-h-full"
-          />
-          <button
-            className="absolute text-xl text-white top-4 right-4"
-            onClick={() => setOverlayImage(null)}
-          >
-            X
-          </button>
-        </div>
-      )}
+      <Overlay image={overlayImage} onClose={() => setOverlayImage(null)} />
     </div>
   );
 };
