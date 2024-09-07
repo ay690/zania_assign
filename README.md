@@ -26,6 +26,9 @@ Containerization: The app is containerized using Docker, allowing easy deploymen
 
 ReactJS, Docker, Tailwind CSS, React-Beautiful-DND, MSWJS, YAML
 
+# Link
+
+https://document-manager-zania.netlify.app/
 
 
 
