@@ -1,0 +1,11 @@
+version: '27.2.0'
+
+services:
+  zania:
+    build: ./
+    container_name: zania_c
+    ports:
+      - '3000:3000'
+    stdin_open: true
+    tty: true
+
